@@ -4,30 +4,32 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-DESTINATION=$BUILD_DIR/app
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
 
-pwd
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-
-
-# Activate NVM
-export NVM_DIR="$DESTINATION/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# source "$NVM_DIR/nvm.sh"
-
-cd $NVM_DIR
-
-nvm --version
-
-# Install Node.js
-nvm install --lts
-
-# Verify Node.js and npm installation
-echo "Node.js version:"
-node --version
-
-echo "Success!"
 which node
 
-npm install
+# pwd
+
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+
+# # Activate NVM
+# current_directory=$(pwd)
+# export NVM_DIR="$current_directory/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# # source "$NVM_DIR/nvm.sh"
+
+# nvm --version
+
+# # Install Node.js
+# nvm install --lts
+
+# # Verify Node.js and npm installation
+# echo "Node.js version:"
+# node --version
+
+# echo "Success!"
+which node
+
+# npm install
