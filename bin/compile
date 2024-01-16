@@ -15,15 +15,13 @@ fi
 source "$DESTINATION/.nvm/nvm.sh"
 
 # Install Node.js
-nvm install node
+nvm install --lts
 
 # Verify Node.js and npm installation
 echo "Node.js version:"
-node -v
-echo "npm version:"
-npm -v
+node --version
 
-echo "node directory: "
+echo "Success!"
 which node
 
 npm install
