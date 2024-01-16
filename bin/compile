@@ -4,16 +4,12 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-DESTINATION=$BUILD_DIR/bin
-
-mkdir -p "$DESTINATION"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 
 # Activate NVM
-export NVM_DIR="$DESTINATION"
-source "$DESTINATION/.nvm/nvm.sh"
+source "$BUILD_DIR/.nvm/nvm.sh"
 
 nvm --version
 
