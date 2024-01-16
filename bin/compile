@@ -15,6 +15,8 @@ export NVM_DIR="$DESTINATION/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # source "$NVM_DIR/nvm.sh"
 
+cd $NVM_DIR
+
 nvm --version
 
 # Install Node.js
