@@ -23,4 +23,7 @@ node -v
 echo "npm version:"
 npm -v
 
+echo "node directory: "
+which node
+
 npm install
