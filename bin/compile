@@ -13,7 +13,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 # Activate NVM
 export NVM_DIR="$DESTINATION"
-source "$DESTINATION/nvm.sh"
+source "$DESTINATION/.nvm/nvm.sh"
+
+nvm --version
 
 # Install Node.js
 nvm install --lts
