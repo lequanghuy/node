@@ -6,13 +6,14 @@ CACHE_DIR=$2
 
 DESTINATION=$BUILD_DIR/bin
 
-if [ ! -d "$DESTINATION/.nvm" ]; then
-    # Install NVM
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-fi
+mkdir -p "$DESTINATION"
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
 
 # Activate NVM
-source "$DESTINATION/.nvm/nvm.sh"
+export NVM_DIR="$DESTINATION"
+source "$DESTINATION/nvm.sh"
 
 # Install Node.js
 nvm install --lts
