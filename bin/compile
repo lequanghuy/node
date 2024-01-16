@@ -11,7 +11,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 
 # Activate NVM
-export NVM_DIR="$DESTINATION"
+export NVM_DIR="$DESTINATION/.nvm"
 source "$NVM_DIR/nvm.sh"
 
 nvm --version
